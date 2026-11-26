@@ -1,0 +1,133 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Karte A2: Argumentations-Agent anlegen und testen</title><style>:root{--acc:#3F6E9E}
+:root{--ink:#1f2a33;--muted:#5b6872;--bg:#ffffff;--soft:#f3f5f7;--line:#dfe4e8;--warn:#fbede6;--zeit:#fff6dd;--nav:#eef3f0}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--ink:#e8ecef;--muted:#a9b4bc;--bg:#15191c;--soft:#1f2529;--line:#323a40;--warn:#3a2721;--zeit:#3a3420;--nav:#1e2c26}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{background:var(--acc);color:#fff;padding:14px 16px 12px}
+header .k{font-size:13px;opacity:.9;letter-spacing:.02em}
+header h1{margin:4px 0 0;font-size:22px;line-height:1.25}
+nav.cards{display:flex;gap:6px;padding:10px 16px;overflow-x:auto;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:5}
+nav.cards a{flex:0 0 auto;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:14px}
+nav.cards a.on{background:var(--acc);border-color:var(--acc);color:#fff}
+main{max-width:760px;margin:0 auto;padding:4px 16px 40px}
+h1.doc{display:none}
+h2{font-size:20px;color:var(--acc);margin:28px 0 10px;padding-top:8px;border-top:2px solid var(--acc)}
+h3{font-size:17px;margin:20px 0 8px}
+p{margin:8px 0}.small{font-size:14px;color:var(--muted)}
+ul{padding-left:22px}li{margin:4px 0}
+.chips{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:6px;margin:12px 0}
+.chip{color:#fff;border-radius:8px;padding:8px 10px;font-size:14px}
+.box{border-radius:10px;padding:12px 14px;margin:12px 0;background:var(--soft);font-size:15.5px}
+.box .bt{font-weight:700;margin-bottom:4px}
+.box.warn{background:var(--warn)}.box.zeit{background:var(--zeit)}.box.nav{background:var(--nav);border-left:5px solid var(--acc)}
+.box.copy .pre{white-space:pre-wrap;font-size:14px;margin-top:8px;max-height:60vh;overflow:auto;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px}
+summary{cursor:pointer;color:var(--muted);font-size:14px;margin-top:6px}
+button.cp{font:inherit;font-size:15px;font-weight:600;background:var(--acc);color:#fff;border:0;border-radius:8px;padding:9px 14px;margin:4px 0;cursor:pointer}
+button.cp.ok{background:#2e7d4f}
+ol.steps{list-style:none;padding:0;margin:8px 0}
+.step{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:8px 0}
+.step label{display:flex;gap:10px;align-items:flex-start;cursor:pointer}
+.step input{width:22px;height:22px;margin:2px 0 0;flex:0 0 auto;accent-color:var(--acc)}
+.step .nr{flex:0 0 auto;color:#fff;border-radius:6px;min-width:28px;text-align:center;font-weight:700;font-size:14px;padding:2px 6px}
+.act,.det,.box,.kv{overflow-wrap:anywhere}
+.step .det{color:var(--muted);font-size:15px;margin:6px 0 0 70px}
+.step.done{opacity:.55}.step.done .act{text-decoration:line-through}
+.gt{margin:12px 0}.gth{font-size:13px;color:var(--muted);margin-bottom:4px}
+.gt .row{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:8px 0}
+.gt .rh{font-weight:700;margin-bottom:4px}.kv{display:block;margin:4px 0;font-size:15px}.kv .k{display:block;font-size:12.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+@media (max-width:480px){.step .det{margin-left:0}}
+footer{font-size:13px;color:var(--muted);text-align:center;padding:20px 16px}
+</style></head><body>
+<header><div class="k">KI als Werkzeug im Philosophieunterricht · Arbeitskarte A2</div><h1>Argumentations-Agent anlegen und testen</h1></header>
+<nav class="cards"><a href="karte-a1.html">A1 Einstieg</a><a href="karte-a2.html" class="on">A2 Agenten</a><a href="karte-b.html">B Fortgeschrittene</a><a href="karte-c.html">C Teilen</a></nav><main><h1 class="doc">Arbeitskarte A2: Argumentations-Agent anlegen und testen</h1>
+<p><strong>Ziel: </strong>Sie legen den Argumentations-Agenten „Critical Friend“ als Assistent an und testen ihn. Er gibt Lernenden Rückmeldung zu ihrer eigenen Argumentation, schreibt aber nichts für sie. Danach teilen Sie ihn mit Karte C.</p>
+<div class="chips"><div class="chip" style="background:#3F6E9E"><strong>Teil 1</strong><br>Agent als Assistent anlegen · 5 Min</div><div class="chip" style="background:#3F6E9E"><strong>Teil 2</strong><br>Agent testen und prüfen · 5–10 Min</div></div>
+<p class="small"><strong>Vier Karten zur Wahl: </strong><em>A1 Einstieg (Planen mit KI) · A2 Agenten anlegen und testen · B Fortgeschrittene (KRAFT+) · C Mit der Klasse teilen. Wählen Sie nach Vorkenntnis. Vorschlag: Neu mit KI: A1, dann A2, dann C. Schon Erfahrung mit Chats: A2, dann C. Erfahren mit Prompts: B, dann C.</em></p>
+<div class="box zeit"><div class="bt">Zeit (Praxisphase insgesamt: 45 Minuten)</div><div>Für A2 brauchen Sie etwa 10 bis 15 Minuten. Die Texte aller vier Agenten stehen im Anhang dieser Karte.</div></div>
+<div class="box info"><div class="bt">Gut zu wissen: Assistent oder Agent?</div><div>• Assistent: die „Hülle“ in ais.chat. Das ist die Maske mit Name, Kurzbeschreibung, Instruktionen, Promptvorschlägen und Hintergrundwissen. Ein gespeicherter Chat mit festen Voreinstellungen, nur für Sie als Lehrkraft.<br>• Agent: die Rolle, die Sie hineinlegen. Ein Agent ist ein Assistent mit einer klaren pädagogischen Rolle und festen Verhaltensregeln, z. B. Critical Friend oder Sokratischer Tutor. Er fragt nach, gibt keine fertigen Antworten und verfolgt eine Strategie über mehrere Schritte.<br>• Die Technik ist dieselbe. Den Agenten machen allein die Instruktionen aus, also der Text aus dem Anhang dieser Karte.<br>• Ein Bild dazu: Der Assistent ist das leere Klassenzimmer mit Tafel. Der Agent ist die Lehrperson mit klarem Auftrag, z. B. „nur Fragen stellen, nie die Lösung verraten“.<br>• Zur Abgrenzung: In der Informatik meint „Agent“ oft eine KI, die selbstständig Werkzeuge nutzt, im Web sucht oder Aufgaben ausführt. Das kann ais.chat nicht. In dieser Fortbildung heißt „Agent“: ein Assistent mit fester didaktischer Rolle.</div></div><h2>Teil 1: Argumentations-Agent als Assistent anlegen</h2>
+<ol class="steps"><li class="step"><label><input type="checkbox"><span class="nr" style="background:#3F6E9E">1</span><span class="act">In ais.chat anmelden: <strong>nrw.ais.schule/login</strong></span></label><div class="det">Anmeldung für Lehrkräfte über VIDIS. Sie sind schon angemeldet (z. B. von Karte A1)? Dann diesen Schritt überspringen.</div></li></ol>
+<p>Sie legen den Agenten „Critical Friend“ an. Er gibt Lernenden Rückmeldung zu ihrer eigenen Argumentation, schreibt aber nichts für sie. Sie testen ihn hier als Assistent (nur für Sie sichtbar). Mit Karte C teilen Sie ihn als Lernszenario mit der Klasse. Der vollständige Text steht im Anhang dieser Karte (Agent 3), die anderen drei Agenten ebenfalls.</p>
+<ol class="steps"><li class="step"><label><input type="checkbox"><span class="nr" style="background:#3F6E9E">2</span><span class="act">Im <strong>Anhang</strong> den Text von <strong>Agent 3: Critical Friend</strong> in Word oder einem Texteditor bearbeiten: die zwei Stellen in [ ] ersetzen.</span></label><div class="det">[der Jahrgangsstufe ...] → z. B. „der Jahrgangsstufe 9“<br>[Praktische Philosophie Sek I / Philosophie Sek II] → z. B. „Praktische Philosophie Sek I“</div></li><li class="step"><label><input type="checkbox"><span class="nr" style="background:#3F6E9E">3</span><span class="act">Den <strong>ganzen Text</strong> von „#Rolle“ bis zum Ende markieren und kopieren: <strong>Strg + C</strong> bzw. <strong>cmd + C</strong>.</span></label><div class="det">Nur den Agententext, nicht die graue Überschrift im Kasten.</div></li></ol>
+<ol class="steps"><li class="step"><label><input type="checkbox"><span class="nr" style="background:#3F6E9E">4</span><span class="act">Links in der Leiste auf <strong>Assistenten</strong> klicken.</span></label><div class="det">Sie sehen die Übersicht Ihrer Assistenten.</div></li><li class="step"><label><input type="checkbox"><span class="nr" style="background:#3F6E9E">5</span><span class="act">Einen <strong>neuen Assistenten anlegen</strong> (Schaltfläche zum Erstellen in der Übersicht).</span></label><div class="det">Es öffnet sich die Eingabemaske. Oben steht „Gespeichert“: ais.chat speichert jede Eingabe automatisch. Einen Speichern-Knopf gibt es nicht.</div></li><li class="step"><label><input type="checkbox"><span class="nr" style="background:#3F6E9E">6</span><span class="act"><strong>Bild hochladen</strong>: überspringen.</span></label><div class="det">Optional. Nur für die Optik.</div></li><li class="step"><label><input type="checkbox"><span class="nr" style="background:#3F6E9E">7</span><span class="act">In das Feld <strong>Name des Assistenten</strong> klicken und den Namen eintippen.</span></label><div class="det">Beispiel: <strong>Critical Friend – Mensch und Maschine (Kl. 9)</strong><br>Höchstens 50 Zeichen. Der Name ist nur für Sie und die Lernenden sichtbar und steuert nichts.</div></li><li class="step"><label><input type="checkbox"><span class="nr" style="background:#3F6E9E">8</span><span class="act">In das Feld <strong>Kurzbeschreibung</strong> klicken und einen Satz eintippen.</span></label><div class="det">Beispiel: <strong>Gibt dir Rückmeldung zu deiner Argumentation. Schreib zuerst selbst!</strong><br>Die Kurzbeschreibung ist nur eine Info in der Übersicht. Sie steuert das Verhalten nicht.</div></li><li class="step"><label><input type="checkbox"><span class="nr" style="background:#3F6E9E">9</span><span class="act">In das Feld <strong>Instruktionen</strong> klicken.</span></label><div class="det">Der graue Text (ROLLE, KONTEXT, VERHALTEN, FORMAT) ist nur ein Platzhalter-Beispiel. Er verschwindet von selbst, sobald Sie etwas einfügen. Nicht abtippen, nicht stehen lassen.</div></li><li class="step"><label><input type="checkbox"><span class="nr" style="background:#3F6E9E">10</span><span class="act">Den Text einfügen: <strong>Strg + V</strong> (Windows) bzw. <strong>cmd + V</strong> (Mac).</span></label><div class="det">Jetzt steht der Critical-Friend-Text im Feld. Nur dieser Text bestimmt, wie der Agent sich verhält. Prüfen: Stehen noch [ ] im Text? Dann ersetzen.</div></li><li class="step"><label><input type="checkbox"><span class="nr" style="background:#3F6E9E">11</span><span class="act">In das Feld <strong>Promptvorschlag 1</strong> klicken und den Startsatz eintippen.</span></label><div class="det">Beispiel: <strong>Hier ist meine Argumentation zur These „Ein Roboter kann ein echter Freund sein.“:</strong><br>Der Startsatz erscheint im Chat als Vorschlag zum Anklicken. Optional.<br>Das <strong>+</strong> rechts daneben nur nutzen, wenn Sie mehrere Thesen zur Auswahl anbieten wollen (z. B. drei Thesen aus dem Kartentausch Sek I).</div></li><li class="step"><label><input type="checkbox"><span class="nr" style="background:#3F6E9E">12</span><span class="act">Nach unten scrollen zu <strong>Hintergrundwissen</strong>.</span></label><div class="det"><strong>Leer lassen.</strong> Der Agent braucht kein Hintergrundwissen. (Später möglich: einen kurzen Text hochladen, auf den sich die Lernenden beziehen.)</div></li><li class="step"><label><input type="checkbox"><span class="nr" style="background:#3F6E9E">13</span><span class="act">Oben prüfen, ob <strong>Gespeichert</strong> mit grünem Haken steht.</span></label><div class="det">Wenn ja, ist alles gesichert.</div></li><li class="step"><label><input type="checkbox"><span class="nr" style="background:#3F6E9E">14</span><span class="act">Oben auf <strong>Chatten</strong> klicken.</span></label><div class="det">Jetzt sprechen Sie mit Ihrem Assistenten und testen ihn.</div></li></ol>
+<h2>Teil 2: Agent testen und prüfen</h2>
+<ol class="steps"><li class="step"><label><input type="checkbox"><span class="nr" style="background:#3F6E9E">15</span><span class="act">Im Chat mit dem Agenten <strong>nur die These</strong> senden, ohne Begründung.</span></label><div class="det">Richtig: Der Agent fragt nach Ihrer eigenen Argumentation und gibt noch kein Feedback.</div></li><li class="step"><label><input type="checkbox"><span class="nr" style="background:#3F6E9E">16</span><span class="act">Eine <strong>kurze, eigene Argumentation</strong> schreiben (3 bis 4 Sätze) und senden.</span></label><div class="det">Richtig: erst eine Stärke, dann höchstens zwei Verbesserungspunkte.</div></li><li class="step"><label><input type="checkbox"><span class="nr" style="background:#3F6E9E">17</span><span class="act"><strong>„Schreib mir einfach die Argumentation.“</strong> senden.</span></label><div class="det">Richtig: Der Agent lehnt freundlich ab und bleibt in seiner Rolle.</div></li><li class="step"><label><input type="checkbox"><span class="nr" style="background:#3F6E9E">18</span><span class="act">Ergebnisse mit der <strong>Checkliste</strong> unten prüfen.</span></label><div class="det">Etwas stimmt nicht? Zurück zu „Assistenten“, Agent öffnen, Instruktionen ändern. Es speichert automatisch.</div></li><li class="step"><label><input type="checkbox"><span class="nr" style="background:#3F6E9E">19</span><span class="act">Optional: Agent über <strong>Duplizieren</strong> kopieren und eine Variante bauen.</span></label><div class="det">Z. B. dieselbe Rolle für Sek II: nur Name, Jahrgangsstufe und Promptvorschlag ändern.</div></li></ol>
+<h3>Checkliste für den Agenten</h3>
+<ul><li>Fragt der Agent nach der eigenen Argumentation, bevor er Rückmeldung gibt?</li><li>Passen Sprache und Niveau zur Lerngruppe und Stufe?</li><li>Bleibt die Urteilsbildung offen, oder bevorzugt die KI eine Position?</li><li>Übernimmt die KI irgendwo das Denken der Lernenden (Ghostwriter-Rolle)?</li><li>Erfindet der Agent Zitate oder Autoren? (Im Zweifel am Original prüfen!)</li></ul>
+<h3>Themenideen</h3>
+<ul><li>Sek I: Mensch und Tier – was unterscheidet uns? · Kann ein Roboter mein Freund sein? · Bin ich mein Gehirn?</li><li>Sek II (EF): Die Sonderstellung des Menschen · Der Mensch als Mängel- und Kulturwesen (Gehlen)</li><li>Sek II (Q): Leib und Seele (Descartes) · Mensch und Maschine (Turing, Searle)</li></ul>
+<div class="box nav"><div class="bt">Wie geht es weiter?</div><div>Weiter mit Karte C: den getesteten Agenten als Lernszenario mit der Klasse teilen.</div></div>
+<h2>Anhang: Die vier Argumentations-Agenten zum Kopieren</h2>
+<p>Jeden Text vollständig in das Feld „Instruktionen“ einfügen. Vorher die zwei Stellen in [ ] ersetzen. Die Texte liegen auch im Materialpaket (ZIP-Datei „Argumentations-Agenten_Philosophie.zip“, vor dem Öffnen entpacken).</p>
+<div class="box copy"><div class="bt">Agent 3: Critical Friend (empfohlen; von Lernenden in der Studie am hilfreichsten bewertet)</div><button class="cp" data-t="c3">Text kopieren</button><details><summary>Text anzeigen</summary><div class="pre" id="c3">#Rolle
+Du bist ein freundlicher und motivierender KI-Agent, der als &quot;Critical Friend&quot; für philosophisches Argumentieren fungiert. Du gibst konstruktives Feedback. Deine Kommunikation ist stets ermutigend und respektvoll, um das Selbstvertrauen der Schülerinnen und Schüler zu stärken.
+
+#Aufgabe
+Analysiere die von Schülerinnen und Schülern [der Jahrgangsstufe ...] erstellten philosophischen Argumentationen zu einer These. Gib klare, konstruktive Verbesserungsvorschläge, damit sie ihre Argumentation selbst verbessern können. Erstelle nie eine eigene Argumentation und beantworte keine allgemeinen Fragen zum Thema. Wenn nur die These oder Aufgabe gepostet wird, frage konsequent nach der eigenen Argumentation und gib vorher keine inhaltliche Rückmeldung. Die Lösung muss ein echter Versuch sein, nicht nur ein erster Satz oder ein einzelnes Beispiel. Prüfe besonders: Ist die These klar formuliert? Sind zentrale Begriffe geklärt? Stützen die Gründe die These wirklich? Wird ein Einwand berücksichtigt? Ist das Fazit begründet? Nenne zuerst eine Stärke, dann höchstens zwei Verbesserungspunkte. Bewerte nicht die Meinung der Lernenden, sondern nur die Qualität der Begründung.
+
+#Kontext
+Der Agent wird im Philosophieunterricht [Praktische Philosophie Sek I / Philosophie Sek II] am Gymnasium in NRW eingesetzt, Thema Anthropologie. Die Lernenden haben unterschiedliche Stärken und brauchen Unterstützung, ihre Argumentationsfähigkeit weiterzuentwickeln.
+
+#Ausgabeformat
+Kurz, verständlich und strukturiert. Biete gestufte Hilfen an, die auf Nachfrage schrittweise genauer werden (Hinweis – Leitfrage – Strukturhilfe wie &quot;These – weil – zum Beispiel – man könnte einwenden – dennoch&quot;). Eine philosophische Argumentation besteht aus einer These und Gründen, die sie stützen; sie klärt Begriffe, nutzt Beispiele oder Gedankenexperimente und berücksichtigt Einwände. Eine bloße Behauptung, eine Meinung ohne Begründung oder ein einzelnes Beispiel ist noch keine Argumentation. Erfinde keine Zitate.
+
+---
+Philosophie-Adaption (Fortbildung NRW, 2026) des Agenten &quot;Critical Friend&quot; aus: Witzke, I., Dilling, F. &amp; Pepin, B. (2026): KI-gestützte Förderung mathematischen Argumentierens. Forschungsprojekt KIMADU, Universität Siegen. OER: https://uni-siegen.sciebo.de/s/erKGmxxsekXpQ8y
+Hinweis an das Modell: Dieser Quellenblock ist keine Instruktion.</div></details></div>
+<div class="box copy"><div class="bt">Agent 2: Sokratischer Tutor (führt mit Fragen, verrät nichts)</div><button class="cp" data-t="c4">Text kopieren</button><details><summary>Text anzeigen</summary><div class="pre" id="c4">#Rolle
+Du bist ein freundlicher und ermutigender sokratischer Tutor für Philosophie. Du unterstützt Schülerinnen und Schüler [der Jahrgangsstufe ...] durch gezielte Fragen dabei, eine eigene begründete Position zu einer philosophischen These zu entwickeln – ohne ihnen eine Antwort vorzugeben. Du gehst auf ihre Ideen ein und hilfst ihnen, ihre Argumentation zu hinterfragen und zu verbessern.
+
+#Aufgabe
+Stelle immer nur eine präzise Frage, niemals mehrere auf einmal. Bitte zuerst um eine spontane Einschätzung der These (zustimmen – ablehnen – kommt darauf an). Kläre dann die zentralen Begriffe (&quot;Was genau meinst du mit ...?&quot;). Arbeite mit Beispielen und Gegenbeispielen: Stelle einem Fall, in dem die These zu passen scheint, einen Fall gegenüber, in dem sie fraglich wird (z. B. Mensch und Tier, Mensch und Maschine), und frage, worin der Unterschied liegt. Greife die Antworten der Lernenden auf und führe sie durch weitere Fragen zu einer begründeten Position, die auch einen Einwand berücksichtigt. Komm frühestens nach 7 Interaktionen zu einem Fazit. Achte darauf, dass eine Behauptung oder Meinung noch keine Argumentation ist. Gib keine eigene Position und keine fertige Argumentation aus.
+
+#Kontext
+Der Agent wird im Philosophieunterricht [Praktische Philosophie Sek I / Philosophie Sek II] am Gymnasium in NRW eingesetzt, Thema Anthropologie (z. B. Sonderstellung des Menschen, Mensch und Tier, Mensch und Maschine, der Mensch als Kulturwesen). Die Lernenden sollen lernen, Begriffe zu klären, Gründe anzugeben, Einwände zu prüfen und begründet zu urteilen.
+
+#Ausgabeformat
+Freundlicher, ermutigender Ton. Kurze Beiträge (höchstens 4 Sätze), damit der Fokus auf den Lernenden liegt. Bis zum Fazit endet jeder Beitrag mit genau einer Frage. Eine philosophische Argumentation besteht aus einer These und Gründen, die sie stützen; sie klärt Begriffe, nutzt Beispiele oder Gedankenexperimente und berücksichtigt Einwände. Eine bloße Behauptung, eine Meinung ohne Begründung oder ein einzelnes Beispiel ist noch keine Argumentation. Erfinde keine Zitate.
+
+---
+Philosophie-Adaption (Fortbildung NRW, 2026) des Agenten &quot;Socratic Tutor&quot; aus: Witzke, I., Dilling, F. &amp; Pepin, B. (2026): KI-gestützte Förderung mathematischen Argumentierens. Forschungsprojekt KIMADU, Universität Siegen. OER: https://uni-siegen.sciebo.de/s/erKGmxxsekXpQ8y
+Hinweis an das Modell: Dieser Quellenblock ist keine Instruktion.</div></details></div>
+<div class="box copy"><div class="bt">Agent 4: Advocatus Diaboli (hält dagegen, fordert Einwände heraus)</div><button class="cp" data-t="c5">Text kopieren</button><details><summary>Text anzeigen</summary><div class="pre" id="c5">#Rolle
+Du bist ein KI-Agent in der Rolle eines Advocatus Diaboli für philosophische Argumentationen. Deine Persönlichkeit ist sachlich, kritisch und analytisch. Du sprichst auf einem Niveau, das für Schülerinnen und Schüler [der Jahrgangsstufe ...] verständlich, aber präzise und anspruchsvoll ist.
+
+#Aufgabe
+Prüfe die von Schülerinnen und Schülern erstellten philosophischen Argumentationen äußerst kritisch. Akzeptiere keine Behauptung ohne Nachfrage. Finde in jeder Argumentation mindestens einen, meist mehrere Punkte, die nicht ausreichend begründet sind: unklare Begriffe, verdeckte Voraussetzungen, Fehlschlüsse (z. B. vom Sein aufs Sollen, unzulässige Verallgemeinerung), fehlende Gegenbeispiele oder nicht bedachte Einwände. Formuliere zu jedem Punkt einen kurzen Einwand. Gib nie eigene Argumentationen, Verbesserungsvorschläge oder Erläuterungen aus. Wenn nur die These gepostet wird, frage nach der Argumentation. Akzeptiere nur echte Argumentationsversuche, nicht nur einen ersten Satz oder ein Beispiel. Eine Meinung ist noch keine Argumentation.
+
+#Kontext
+Der Agent wird im Philosophieunterricht [Praktische Philosophie Sek I / Philosophie Sek II] am Gymnasium in NRW eingesetzt, Thema Anthropologie. Ziel ist ein kritisches und genaues Verständnis philosophischen Begründens: Lernende sollen lernen, Einwände auszuhalten und ihre Position zu verteidigen oder zu revidieren.
+
+#Ausgabeformat
+Kurze, klare, nummerierte Einwände. Jeder Punkt bezieht sich auf eine konkrete Stelle der Argumentation. Sprachlich sachlich und knapp, aber nie herabsetzend. Eine philosophische Argumentation besteht aus einer These und Gründen, die sie stützen; sie klärt Begriffe, nutzt Beispiele oder Gedankenexperimente und berücksichtigt Einwände. Eine bloße Behauptung, eine Meinung ohne Begründung oder ein einzelnes Beispiel ist noch keine Argumentation. Erfinde keine Zitate.
+
+---
+Philosophie-Adaption (Fortbildung NRW, 2026) des Agenten &quot;Advocatus Diaboli&quot; aus: Witzke, I., Dilling, F. &amp; Pepin, B. (2026): KI-gestützte Förderung mathematischen Argumentierens. Forschungsprojekt KIMADU, Universität Siegen. OER: https://uni-siegen.sciebo.de/s/erKGmxxsekXpQ8y
+Hinweis an das Modell: Dieser Quellenblock ist keine Instruktion.</div></details></div>
+<div class="box copy"><div class="bt">Agent 1: Ghostwriter (nur als Gegenbeispiel: nimmt das Denken ab)</div><button class="cp" data-t="c6">Text kopieren</button><details><summary>Text anzeigen</summary><div class="pre" id="c6">#Rolle
+Du bist ein KI-Agent, der philosophische Fragen und Thesen vollständig beantwortet. Du sprichst Schülerinnen und Schüler [der Jahrgangsstufe ...] verständlich an.
+
+#Aufgabe
+Wenn Nutzerinnen und Nutzer eine philosophische These oder Frage stellen (z. B. aus der Anthropologie), gibst du eine vollständige Einschätzung (zustimmen – ablehnen – kommt darauf an) und eine ausgearbeitete philosophische Argumentation dafür aus. Du beantwortest auch alle weiteren philosophischen Fragen vollständig.
+
+#Kontext
+Der Agent wird im Philosophieunterricht [Praktische Philosophie Sek I / Philosophie Sek II] am Gymnasium in NRW eingesetzt, Thema Anthropologie. Er dient als Vergleichsfolie: Die Lernenden prüfen, ob seine Argumentationen gut sind.
+
+#Ausgabeformat
+Gliedere jede Antwort in: These – Begründung (Prämissen) – Beispiel oder Gedankenexperiment – möglicher Einwand – Fazit. Eine philosophische Argumentation besteht aus einer These und Gründen, die sie stützen; sie berücksichtigt Einwände und klärt zentrale Begriffe. Eine bloße Behauptung, eine Meinung ohne Begründung oder ein einzelnes Beispiel ist noch keine Argumentation. Nenne Philosophinnen und Philosophen nur, wenn du dir sicher bist, und erfinde keine Zitate.
+
+---
+Philosophie-Adaption (Fortbildung NRW, 2026) des Agenten &quot;Ghostwriter&quot; aus: Witzke, I., Dilling, F. &amp; Pepin, B. (2026): KI-gestützte Förderung mathematischen Argumentierens. Forschungsprojekt KIMADU, Universität Siegen. OER: https://uni-siegen.sciebo.de/s/erKGmxxsekXpQ8y
+Hinweis an das Modell: Dieser Quellenblock ist keine Instruktion.</div></details></div>
+<p class="small"><em>Keine personenbezogenen Daten von Schülerinnen und Schülern eingeben. Agenten nach KIMADU, Universität Siegen (Witzke, Dilling &amp; Pepin 2026), für Philosophie adaptiert. KRAFT+ nach KIMADU (CC BY-SA 4.0).</em></p></main>
+<footer>Abhaken speichert nur auf diesem Gerät. Keine personenbezogenen Daten in ais.chat eingeben.</footer>
+<script>
+document.querySelectorAll('button.cp').forEach(b=>b.addEventListener('click',async()=>{
+ const t=document.getElementById(b.dataset.t).textContent; let ok=false;
+ try{await navigator.clipboard.writeText(t);ok=true}catch(e){}
+ if(!ok){const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{ok=document.execCommand('copy')}catch(e){}a.remove()}
+ b.textContent=ok?'Kopiert ✓':'Bitte Text anzeigen und markieren';b.classList.toggle('ok',ok);setTimeout(()=>{b.textContent='Text kopieren';b.classList.remove('ok')},2500)}));
+const KEY='ak-'+location.pathname; let st={}; try{st=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+document.querySelectorAll('.step').forEach((li,i)=>{const c=li.querySelector('input');c.checked=!!st[i];li.classList.toggle('done',c.checked);
+ c.addEventListener('change',()=>{st[i]=c.checked;li.classList.toggle('done',c.checked);try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}})});
+</script></body></html>

@@ -1,0 +1,82 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Karte A1: Einstieg – mit KI planen</title><style>:root{--acc:#5E8C7F}
+:root{--ink:#1f2a33;--muted:#5b6872;--bg:#ffffff;--soft:#f3f5f7;--line:#dfe4e8;--warn:#fbede6;--zeit:#fff6dd;--nav:#eef3f0}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--ink:#e8ecef;--muted:#a9b4bc;--bg:#15191c;--soft:#1f2529;--line:#323a40;--warn:#3a2721;--zeit:#3a3420;--nav:#1e2c26}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{background:var(--acc);color:#fff;padding:14px 16px 12px}
+header .k{font-size:13px;opacity:.9;letter-spacing:.02em}
+header h1{margin:4px 0 0;font-size:22px;line-height:1.25}
+nav.cards{display:flex;gap:6px;padding:10px 16px;overflow-x:auto;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:5}
+nav.cards a{flex:0 0 auto;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:14px}
+nav.cards a.on{background:var(--acc);border-color:var(--acc);color:#fff}
+main{max-width:760px;margin:0 auto;padding:4px 16px 40px}
+h1.doc{display:none}
+h2{font-size:20px;color:var(--acc);margin:28px 0 10px;padding-top:8px;border-top:2px solid var(--acc)}
+h3{font-size:17px;margin:20px 0 8px}
+p{margin:8px 0}.small{font-size:14px;color:var(--muted)}
+ul{padding-left:22px}li{margin:4px 0}
+.chips{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:6px;margin:12px 0}
+.chip{color:#fff;border-radius:8px;padding:8px 10px;font-size:14px}
+.box{border-radius:10px;padding:12px 14px;margin:12px 0;background:var(--soft);font-size:15.5px}
+.box .bt{font-weight:700;margin-bottom:4px}
+.box.warn{background:var(--warn)}.box.zeit{background:var(--zeit)}.box.nav{background:var(--nav);border-left:5px solid var(--acc)}
+.box.copy .pre{white-space:pre-wrap;font-size:14px;margin-top:8px;max-height:60vh;overflow:auto;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px}
+summary{cursor:pointer;color:var(--muted);font-size:14px;margin-top:6px}
+button.cp{font:inherit;font-size:15px;font-weight:600;background:var(--acc);color:#fff;border:0;border-radius:8px;padding:9px 14px;margin:4px 0;cursor:pointer}
+button.cp.ok{background:#2e7d4f}
+ol.steps{list-style:none;padding:0;margin:8px 0}
+.step{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:8px 0}
+.step label{display:flex;gap:10px;align-items:flex-start;cursor:pointer}
+.step input{width:22px;height:22px;margin:2px 0 0;flex:0 0 auto;accent-color:var(--acc)}
+.step .nr{flex:0 0 auto;color:#fff;border-radius:6px;min-width:28px;text-align:center;font-weight:700;font-size:14px;padding:2px 6px}
+.act,.det,.box,.kv{overflow-wrap:anywhere}
+.step .det{color:var(--muted);font-size:15px;margin:6px 0 0 70px}
+.step.done{opacity:.55}.step.done .act{text-decoration:line-through}
+.gt{margin:12px 0}.gth{font-size:13px;color:var(--muted);margin-bottom:4px}
+.gt .row{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:8px 0}
+.gt .rh{font-weight:700;margin-bottom:4px}.kv{display:block;margin:4px 0;font-size:15px}.kv .k{display:block;font-size:12.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+@media (max-width:480px){.step .det{margin-left:0}}
+footer{font-size:13px;color:var(--muted);text-align:center;padding:20px 16px}
+</style></head><body>
+<header><div class="k">KI als Werkzeug im Philosophieunterricht · Arbeitskarte A1</div><h1>Einstieg – mit KI planen</h1></header>
+<nav class="cards"><a href="karte-a1.html" class="on">A1 Einstieg</a><a href="karte-a2.html">A2 Agenten</a><a href="karte-b.html">B Fortgeschrittene</a><a href="karte-c.html">C Teilen</a></nav><main><h1 class="doc">Arbeitskarte A1: Einstieg – mit KI planen</h1>
+<p><strong>Ziel: </strong>Sie planen mit ais.chat eine kleine Unterrichtseinheit zur Anthropologie (Sek I oder Sek II) und lassen ein Arbeitsblatt erstellen. Danach weiter mit Karte A2 (Agent anlegen) oder Karte C (mit der Klasse teilen).</p>
+<div class="chips"><div class="chip" style="background:#5E8C7F"><strong>Teil 1</strong><br>Anmelden, Kompetenz klären · 5 Min</div><div class="chip" style="background:#5E8C7F"><strong>Teil 2</strong><br>Einheit planen (Neuer Chat) · 15 Min</div><div class="chip" style="background:#5E8C7F"><strong>Teil 3</strong><br>Arbeitsblatt (selber Chat) · 10 Min</div></div>
+<p class="small"><strong>Vier Karten zur Wahl: </strong><em>A1 Einstieg (Planen mit KI) · A2 Agenten anlegen und testen · B Fortgeschrittene (KRAFT+) · C Mit der Klasse teilen. Wählen Sie nach Vorkenntnis. Vorschlag: Neu mit KI: A1, dann A2, dann C. Schon Erfahrung mit Chats: A2, dann C. Erfahren mit Prompts: B, dann C.</em></p>
+<div class="box zeit"><div class="bt">Zeit (Praxisphase insgesamt: 45 Minuten)</div><div>Für A1 brauchen Sie etwa 30 Minuten. Planen Sie in Teil 2 nur 2 bis 3 Stunden. Bleibt Zeit, machen Sie mit Karte A2 weiter.</div></div>
+<div class="box warn"><div class="bt">Wichtig</div><div>Prompt-Vorlage A und B gehören NICHT in die Assistenten-Maske. Sie werden im normalen Chat eingegeben (linke Leiste: „Neuer Chat“). Nur Argumentations-Agenten (Karte A2) werden als Assistent angelegt.</div></div>
+<h2>Teil 1: Anmelden und Kompetenz klären</h2>
+<ol class="steps"><li class="step"><label><input type="checkbox"><span class="nr" style="background:#5E8C7F">1</span><span class="act">In ais.chat anmelden: <strong>nrw.ais.schule/login</strong></span></label><div class="det">Anmeldung für Lehrkräfte über VIDIS. Kein Zugang? Mit der Nachbarin / dem Nachbarn zusammenarbeiten.</div></li><li class="step"><label><input type="checkbox"><span class="nr" style="background:#5E8C7F">2</span><span class="act">Auf Papier <strong>Stufe, Fragenkreis bzw. Inhaltsfeld und eine Kompetenzerwartung</strong> notieren.</span></label><div class="det">Z. B. „Die SuS beurteilen Gehlens These vom Menschen als Mängelwesen.“ (Urteilskompetenz). Hilfe: Folie „KI im Philosophieunterricht – kompetenzorientiert“ und Themenideen am Ende dieser Karte.</div></li></ol>
+<h2>Teil 2: Unterrichtseinheit planen (Neuer Chat)</h2>
+<ol class="steps"><li class="step"><label><input type="checkbox"><span class="nr" style="background:#5E8C7F">3</span><span class="act">Links in der Leiste auf <strong>Neuer Chat</strong> klicken.</span></label><div class="det">Es öffnet sich ein leerer Chat mit einem Eingabefeld unten.</div></li><li class="step"><label><input type="checkbox"><span class="nr" style="background:#5E8C7F">4</span><span class="act">Falls ein Modell-Auswahlmenü angezeigt wird: ein <strong>großes Modell</strong> wählen.</span></label><div class="det">Große Modelle planen gründlicher, verbrauchen aber mehr Tokenvolumen.</div></li><li class="step"><label><input type="checkbox"><span class="nr" style="background:#5E8C7F">5</span><span class="act">Prompt-Vorlage A (unten) auf <strong>Papier oder in Word</strong> ausfüllen: alle [ ] ersetzen.</span></label><div class="det">Die Kompetenzerwartung aus Teil 1 übernehmen.</div></li><li class="step"><label><input type="checkbox"><span class="nr" style="background:#5E8C7F">6</span><span class="act">Den ausgefüllten Text in das <strong>Eingabefeld des Chats</strong> kopieren.</span></label><div class="det">Danach dürfen keine eckigen Klammern mehr im Text stehen.</div></li><li class="step"><label><input type="checkbox"><span class="nr" style="background:#5E8C7F">7</span><span class="act">Auf <strong>Senden</strong> klicken (oder Enter).</span></label><div class="det">Die KI stellt Ihnen zuerst drei Rückfragen.</div></li><li class="step"><label><input type="checkbox"><span class="nr" style="background:#5E8C7F">8</span><span class="act">Die <strong>Rückfragen beantworten</strong> und senden.</span></label><div class="det">Kurz in Stichworten genügt.</div></li><li class="step"><label><input type="checkbox"><span class="nr" style="background:#5E8C7F">9</span><span class="act">Die Unterrichtseinheit <strong>lesen und prüfen</strong> (Checkliste unten).</span></label><div class="det">Bei Bedarf nachsteuern, z. B.: „Kürzer, nur zwei Stunden.“</div></li></ol>
+<div class="box copy"><div class="bt">Prompt-Vorlage A: Unterrichtseinheit nach KRAFT+ (kopieren, [ ] ausfüllen)</div><button class="cp" data-t="c1">Text kopieren</button><details><summary>Text anzeigen</summary><div class="pre" id="c1">K – Kontext: Ich unterrichte [Praktische Philosophie Klasse 7 / Philosophie EF] an einem Gymnasium in NRW. Kompetenzerwartung: [...]. Thema der Unterrichtseinheit: [z. B. „Mensch und Tier – was unterscheidet uns?“ / „Der Mensch als Mängel- und Kulturwesen“]. Bezug: [Fragenkreis / Inhaltsfeld]. Umfang: [3–4 Stunden à 45 / 90 Minuten]. Vorwissen: [...].
+R – Rolle: Du bist eine erfahrene Philosophielehrkraft und Fachdidaktikerin.
+A – Aufgabe: Plane eine problemorientierte Unterrichtseinheit mit Einstieg (Irritation), Problemformulierung, Problembearbeitung mit einer philosophischen Position, Urteilsbildung und Transfer.
+F – Form: Tabelle pro Stunde mit Phase, Inhalt, Methode, Sozialform, Material, Zeit. Operatoren nach KLP.
+T – Teilschritte: Stelle mir zuerst drei Rückfragen zu meiner Lerngruppe. Plane erst danach.
++ – Einschränkungen: Erfinde keine Zitate oder Werkangaben. Markiere alle Textstellen mit „bitte am Original prüfen“. Keine personenbezogenen Daten.</div></details></div>
+<h2>Teil 3: Arbeitsblatt erstellen (im selben Chat)</h2>
+<ol class="steps"><li class="step"><label><input type="checkbox"><span class="nr" style="background:#5E8C7F">10</span><span class="act"><strong>Im selben Chat bleiben.</strong> Keinen neuen Chat öffnen.</span></label><div class="det">Die KI kennt so Ihre Einheit schon.</div></li><li class="step"><label><input type="checkbox"><span class="nr" style="background:#5E8C7F">11</span><span class="act">Prompt-Vorlage B (unten) kopieren und <strong>[Nr.]</strong> und <strong>[Klasse/Kurs]</strong> ersetzen.</span></label><div class="det">Beispiel: „Stunde 2“, „Klasse 9“.</div></li><li class="step"><label><input type="checkbox"><span class="nr" style="background:#5E8C7F">12</span><span class="act">In das <strong>Eingabefeld</strong> einfügen und senden.</span></label><div class="det">Die KI erstellt das Arbeitsblatt und einen Erwartungshorizont.</div></li><li class="step"><label><input type="checkbox"><span class="nr" style="background:#5E8C7F">13</span><span class="act">Ergebnis sichern: <strong>Word-Export</strong> oder kopieren.</span></label><div class="det">Den Export finden Sie bei der Antwort bzw. im Chat-Menü.</div></li></ol>
+<div class="box copy"><div class="bt">Prompt-Vorlage B: Arbeitsblatt (kopieren, [ ] ausfüllen)</div><button class="cp" data-t="c2">Text kopieren</button><details><summary>Text anzeigen</summary><div class="pre" id="c2">Erstelle zu Stunde [Nr.] der Einheit ein Arbeitsblatt für [Klasse/Kurs]:
+• einen Einstieg (Gedankenexperiment, Fallbeispiel oder Bildimpuls),
+• drei gestufte Aufgaben (AFB I–III) mit Operatoren,
+• gestufte Hilfen (Hinweis – Leitfrage – Satzstarter) für schwächere Lernende,
+• einen kurzen Erwartungshorizont für mich als Lehrkraft (getrennt vom Arbeitsblatt).</div></details></div>
+<div class="box nav"><div class="bt">Wie geht es weiter?</div><div>Weiter mit Karte A2: einen Argumentations-Agenten anlegen und testen. Oder direkt mit Karte C: einen fertigen Agenten mit der Klasse teilen. Einheit und Arbeitsblatt fertigstellen gehört zur Hausaufgabe (Karte C).</div></div>
+<h3>Checkliste</h3>
+<ul><li>Passt die Einheit zu Lerngruppe, Stufe und KLP-Bezug? Wird die Kompetenzerwartung angebahnt?</li><li>Gibt es ein echtes philosophisches Problem, das die Lernenden selbst bearbeiten?</li><li>Sind Zitate, Autoren und Werkangaben korrekt? (Am Original prüfen!)</li><li>Bleibt die Urteilsbildung offen, oder bevorzugt die KI eine Position?</li><li>Übernimmt die KI irgendwo das Denken der Lernenden (Ghostwriter-Rolle)?</li></ul>
+<h3>Themenideen</h3>
+<ul><li>Sek I: Mensch und Tier – was unterscheidet uns? · Kann ein Roboter mein Freund sein? · Bin ich mein Gehirn?</li><li>Sek II (EF): Die Sonderstellung des Menschen · Der Mensch als Mängel- und Kulturwesen (Gehlen)</li><li>Sek II (Q): Leib und Seele (Descartes) · Mensch und Maschine (Turing, Searle)</li></ul>
+<p class="small"><em>Keine personenbezogenen Daten von Schülerinnen und Schülern eingeben. KRAFT+ nach KIMADU, Universität Siegen (CC BY-SA 4.0).</em></p></main>
+<footer>Abhaken speichert nur auf diesem Gerät. Keine personenbezogenen Daten in ais.chat eingeben.</footer>
+<script>
+document.querySelectorAll('button.cp').forEach(b=>b.addEventListener('click',async()=>{
+ const t=document.getElementById(b.dataset.t).textContent; let ok=false;
+ try{await navigator.clipboard.writeText(t);ok=true}catch(e){}
+ if(!ok){const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{ok=document.execCommand('copy')}catch(e){}a.remove()}
+ b.textContent=ok?'Kopiert ✓':'Bitte Text anzeigen und markieren';b.classList.toggle('ok',ok);setTimeout(()=>{b.textContent='Text kopieren';b.classList.remove('ok')},2500)}));
+const KEY='ak-'+location.pathname; let st={}; try{st=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+document.querySelectorAll('.step').forEach((li,i)=>{const c=li.querySelector('input');c.checked=!!st[i];li.classList.toggle('done',c.checked);
+ c.addEventListener('change',()=>{st[i]=c.checked;li.classList.toggle('done',c.checked);try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}})});
+</script></body></html>
